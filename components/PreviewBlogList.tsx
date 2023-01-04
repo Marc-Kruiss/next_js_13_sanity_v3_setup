@@ -11,8 +11,10 @@ export default function PreviewBlogList({ query }: Props) {
   console.log("LOADING posts...", posts);
   return (
     <div>
-      {posts.map((post) => (
-        <p>{post.title}</p>
+      {posts.map((post, i) => (
+        <div key={i}>
+          <p>{post.title}</p>
+        </div>
       ))}
     </div>
   );

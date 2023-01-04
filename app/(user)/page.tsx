@@ -30,8 +30,10 @@ export default async function Homepage() {
   return (
     <div>
       <h1>Not in Preview Mode</h1>
-      {posts.map((post) => (
-        <p>{post.title}</p>
+      {posts.map((post, i) => (
+        <div key={i}>
+          <p>{post.title}</p>
+        </div>
       ))}
     </div>
   );
